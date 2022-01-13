@@ -1,3 +1,4 @@
+import { LogoMaker } from "../LogoMaker";
 import "./index.css";
 
 export const Navbar = () => {
@@ -7,7 +8,10 @@ export const Navbar = () => {
                 <div className="container">
                     <div className="navbar">
                         <div className="logo-section">
-                            <h4>Vaskr</h4>
+                            <LogoMaker
+                                mainChar="V"
+                                name="askr"
+                            />
                         </div>
                         <ul className="navigation-link">
                             <li><a href="#">About</a></li>

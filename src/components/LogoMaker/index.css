@@ -1,0 +1,21 @@
+.logo-maker {
+	display: flex;
+	align-items: flex-end;
+	position: relative;
+}
+
+.main-letter-wrapper {
+	width: 2.25rem;
+	height: 2.25rem;
+	border-radius: 100%;
+	background-color: var(--link-color);
+	text-align: center;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.name-wrapper {
+	position: absolute;
+	font-size: 1.75rem;
+	left: 1.75rem;
+}
