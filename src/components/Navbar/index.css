@@ -1,5 +1,6 @@
 .navigation-section {
 	width: 100%;
+	z-index: 100;
 }
 
 .navbar-container {
@@ -10,7 +11,14 @@
 	top: 0;
 	left: 0;
 
-	background-color: var(--navbar-background-color);
+	background: rgb(4, 28, 50);
+	background: linear-gradient(
+		180deg,
+		rgba(4, 28, 50, 1) 0%,
+		rgba(4, 28, 50, 0.4682247899159664) 72%,
+		rgba(4, 28, 50, 0.2553396358543417) 100%,
+		rgba(4, 28, 50, 1) 100%
+	);
 }
 
 .navbar {

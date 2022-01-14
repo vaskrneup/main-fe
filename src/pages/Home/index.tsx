@@ -1,12 +1,11 @@
-import "./css/index.css";
+import "./index.css";
 import { Layout } from "../../components/Layout";
+import { Intro } from "./components/Intro";
 
 export const Home = () => {
     return (
         <Layout>
-            <div>
-                <h1>APPLE</h1>
-            </div>
+            <Intro />
         </Layout>
     )
 }
