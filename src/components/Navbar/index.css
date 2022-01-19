@@ -1,5 +1,6 @@
 .navigation-section {
 	width: 100%;
+	position: relative;
 	z-index: 100;
 }
 
@@ -52,6 +53,10 @@
 	bottom: 0;
 }
 
+.info-bottom-container {
+	padding: 0;
+}
+
 .navbar-bottom-section {
 	display: flex;
 	justify-content: space-between;
@@ -63,6 +68,18 @@
 	flex-direction: row;
 	align-items: center;
 	writing-mode: vertical-lr;
+}
+
+.right-line {
+	position: fixed;
+	bottom: 0;
+	right: 1rem;
+}
+
+.left-line {
+	position: fixed;
+	bottom: 0;
+	left: 1rem;
 }
 
 .vertical-line {

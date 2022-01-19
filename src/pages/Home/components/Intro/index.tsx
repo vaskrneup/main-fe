@@ -1,12 +1,10 @@
 import "./index.css";
 
 
+
 export const Intro = () => {
     return (
         <div className="intro-section">
-            <div className="intro-section-gradient">
-                &nbsp;
-            </div>
             <div className="container">
                 <div className="intro">
                     <h4 className="my-name-title">

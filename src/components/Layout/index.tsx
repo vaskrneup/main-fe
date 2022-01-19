@@ -6,9 +6,10 @@ import "./index.css";
 export const Layout = (props: layoutPropsDatatype) => {
     return (
         <div className="layout">
-            {props.children}
-
             <Navbar />
+            <main>
+                {props.children}
+            </main>
         </div>
     )
 }

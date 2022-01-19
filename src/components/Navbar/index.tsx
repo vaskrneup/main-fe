@@ -22,22 +22,16 @@ export const Navbar = () => {
                     </div>
                 </div>
             </nav>
-            <div className="navigation-info-bottom">
-                <div className="container">
-                    <div className="navbar-bottom-section">
-                        <div className="navbar-bottom-detail">
-                            <span></span>
-                            <div className="vertical-line">
-                                &nbsp;
-                            </div>
-                        </div>
-                        <div className="navbar-bottom-detail">
-                            <a href="mailto:abc@example.com">bhaskar@vaskrneup.com</a>
-                            <div className="vertical-line">
-                                &nbsp;
-                            </div>
-                        </div>
-                    </div>
+            <div className="navbar-bottom-detail left-line">
+                <span></span>
+                <div className="vertical-line">
+                    &nbsp;
+                </div>
+            </div>
+            <div className="navbar-bottom-detail right-line">
+                <a href="mailto:abc@example.com">bhaskar@vaskrneup.com</a>
+                <div className="vertical-line">
+                    &nbsp;
                 </div>
             </div>
         </div>
