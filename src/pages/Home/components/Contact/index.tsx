@@ -33,8 +33,21 @@ export const Contact = () => {
                                 <div className="message-container">
                                     <div className="input-container">
                                         <label htmlFor="message">Message</label>
-                                        <textarea id="message" cols={30} rows={10}></textarea>
+                                        <textarea
+                                            placeholder="Lets have a chat!!"
+                                            id="message"
+                                            cols={30}
+                                            rows={10}
+                                        ></textarea>
                                     </div>
+                                </div>
+
+                                <div className="input-container">
+                                    <input
+                                        type="submit"
+                                        value="Say Hello!"
+                                        className="submit-btn"
+                                    />
                                 </div>
                             </form>
                         </div>
