@@ -1,5 +1,5 @@
 import { TechnologyView } from "./components/TechnologyView";
-import "./index.css";
+import "./about-me.css";
 import pythonLogo from "../../../../global_assets/images/technologies/PYTHON_LOGO.png";
 import djangoLogo from "../../../../global_assets/images/technologies/DJANGO_LOGO.png";
 import djangoRestFrameworkLogo from "../../../../global_assets/images/technologies/DRF_LOGO.png";
@@ -15,6 +15,7 @@ import materialUILogo from "../../../../global_assets/images/technologies/MUI_LO
 import gitLogo from "../../../../global_assets/images/technologies/GIT_LOGO.png";
 
 import { techIconAndName } from "./datatypes";
+import { Section } from "../Section";
 
 const TECHNOLOGIES_I_HAVE_WORKED_WITH_LIST: techIconAndName[] = [
     {
@@ -74,52 +75,58 @@ const TECHNOLOGIES_I_HAVE_WORKED_WITH_LIST: techIconAndName[] = [
 
 export const AboutMe = () => {
     return (
-        <div className="aboutme-section">
-            <div className="container">
-                <div className="aboutme">
-                    <div className="content">
-                        <h3>ABOUT ME</h3>
-                        <br />
-                        <div className="main-content">
-                            <div className="my-description">
-                                <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis, nostrum! Velit voluptates, minus hic blanditiis quasi aliquam atque nesciunt saepe enim ipsum dolore pariatur explicabo libero quisquam culpa accusamus corporis!
-                                </p>
-                                <br />
-                                <p>
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque doloribus delectus rem fuga deleniti minima, cumque, cum natus suscipit velit dolorem quibusdam magnam magni itaque molestiae repudiandae facilis illum maxime!
-                                </p>
-                                <br />
-                            </div>
-                            <div className="technologies-used">
-                                <h4>
-                                    Here are few Technologies I've worked with:
-                                </h4>
+        <Section>
+            <div className="aboutme-section">
+                <div className="container">
+                    <div className="aboutme">
+                        <h3 className="section-title">
+                            ABOUT ME
+                        </h3>
+                        <div className="section-body">
 
-                                <div className="technologies-grid">
-                                    {
-                                        TECHNOLOGIES_I_HAVE_WORKED_WITH_LIST.map((technology: techIconAndName) => {
-                                            return (
-                                                <TechnologyView
-                                                    key={technology.name}
-                                                    image={technology.icon}
-                                                    name={technology.name}
-                                                />
-                                            )
-                                        })
-                                    }
+                            <div className="content">
+                                <div className="about-me-first">
+                                    <div className="my-description">
+                                        <p>
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis, nostrum! Velit voluptates, minus hic blanditiis quasi aliquam atque nesciunt saepe enim ipsum dolore pariatur explicabo libero quisquam culpa accusamus corporis!
+                                        </p>
+                                        <br />
+                                        <p>
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque doloribus delectus rem fuga deleniti minima, cumque, cum natus suscipit velit dolorem quibusdam magnam magni itaque molestiae repudiandae facilis illum maxime!
+                                        </p>
+                                        <br />
+                                    </div>
+                                    <div className="technologies-used">
+                                        <h4>
+                                            Here are few Technologies I've worked with:
+                                        </h4>
+
+                                        <div className="technologies-grid">
+                                            {
+                                                TECHNOLOGIES_I_HAVE_WORKED_WITH_LIST.map((technology: techIconAndName) => {
+                                                    return (
+                                                        <TechnologyView
+                                                            key={technology.name}
+                                                            image={technology.icon}
+                                                            name={technology.name}
+                                                        />
+                                                    )
+                                                })
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="image-container">
+                                    <img
+                                        className="image"
+                                        src="https://pbs.twimg.com/profile_images/1265216954408689665/IkEH5P_j_400x400.jpg" alt="Bhaskar"
+                                    />
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="image-container">
-                        <img
-                            className="image"
-                            src="https://pbs.twimg.com/profile_images/1265216954408689665/IkEH5P_j_400x400.jpg" alt="Bhaskar"
-                        />
-                    </div>
                 </div>
-            </div>
-        </div >
+            </div >
+        </Section>
     )
 }
