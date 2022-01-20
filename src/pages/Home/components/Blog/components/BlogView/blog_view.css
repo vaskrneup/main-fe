@@ -1,0 +1,26 @@
+.blog-view-container {
+	background-color: var(--cards-background-color);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	width: 100%;
+	height: 14.5rem;
+
+	padding: 0.75rem;
+}
+
+.blog-category-chip-container {
+	padding: 0.25rem 0;
+	display: flex;
+}
+
+.blog-category-chip-container > * {
+	margin: 0 0.2rem;
+}
+
+.blog-datetime-container {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.25rem 0;
+}
