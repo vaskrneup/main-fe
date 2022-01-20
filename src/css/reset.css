@@ -26,6 +26,11 @@
 	font-family: var(--default-font);
 }
 
+input,
+textarea {
+	color: black;
+}
+
 html {
 	background-color: var(--main-background-color);
 }

@@ -1,3 +1,4 @@
+import { Copyright } from "../Copyright";
 import { Navbar } from "../Navbar"
 import { layoutPropsDatatype } from "./datatypes"
 import "./index.css";
@@ -10,6 +11,7 @@ export const Layout = (props: layoutPropsDatatype) => {
             <main>
                 {props.children}
             </main>
+            <Copyright />
         </div>
     )
 }
