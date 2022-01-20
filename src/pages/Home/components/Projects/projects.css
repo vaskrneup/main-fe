@@ -1,0 +1,11 @@
+.projects-container {
+	display: grid;
+	grid-row-gap: 1.75rem;
+	grid-column-gap: 1rem;
+	grid-template-columns: auto auto;
+	padding: 2rem 0;
+}
+.view-more-link-container {
+	width: 100%;
+	text-align: center;
+}

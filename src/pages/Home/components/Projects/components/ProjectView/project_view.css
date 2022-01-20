@@ -1,0 +1,28 @@
+.project-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	width: 100%;
+	height: 14.5rem;
+
+	padding: 0.75rem;
+}
+
+.top-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.project-description {
+	padding: 0.25rem 0;
+}
+
+.category-chip-container {
+	display: flex;
+}
+
+.category-chip-container > * {
+	margin: 0 0.2rem;
+}
