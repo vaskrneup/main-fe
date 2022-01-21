@@ -1,7 +1,35 @@
+.section-container {
+	margin: 5rem 0;
+}
+
+.section-container:hover .container {
+	transform: scale(1.04);
+}
+
 .section-container .section-title {
+	transition: font-size 200s;
+	position: relative;
+	width: fit-content;
+	padding: 0.5rem 0.25rem;
+}
+
+.section-container .section-title::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 1px;
+	background-color: var(--link-color);
+	transition: width 0.5s, left 0.5s;
+}
+
+.section-container:hover .section-title::after {
+	width: 100%;
+	left: 0;
 }
 
 .section-container .section-body {
 	padding: 0 1rem;
-	margin: 2rem 0;
+	margin-top: 2rem;
 }
