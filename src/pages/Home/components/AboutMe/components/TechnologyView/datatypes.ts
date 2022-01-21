@@ -1,4 +1,5 @@
 export interface technologyViewPropsType {
     image: string,
-    name: string
+    name: string,
+    url: string
 } 

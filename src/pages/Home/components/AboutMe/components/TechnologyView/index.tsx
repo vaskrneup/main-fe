@@ -4,14 +4,16 @@ import { technologyViewPropsType } from "./datatypes"
 
 export const TechnologyView = (props: technologyViewPropsType) => {
     return (
-        <div className="technology-view">
-            <img
-                src={props.image}
-                alt="Python Programming Language Icon"
-            />
-            <span className="technology-name">
-                {props.name}
-            </span>
-        </div>
+        <a href={props.url} target="_blank">
+            <div className="technology-view">
+                <img
+                    src={props.image}
+                    alt="Python Programming Language Icon"
+                />
+                <span className="technology-name">
+                    {props.name}
+                </span>
+            </div>
+        </a>
     )
 }

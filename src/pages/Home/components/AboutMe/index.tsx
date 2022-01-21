@@ -20,55 +20,68 @@ import { Section } from "../Section";
 const TECHNOLOGIES_I_HAVE_WORKED_WITH_LIST: techIconAndName[] = [
     {
         name: "Python",
-        icon: pythonLogo
+        icon: pythonLogo,
+        url: "https://www.python.org/"
     },
     {
         name: "Django",
-        icon: djangoLogo
+        icon: djangoLogo,
+        url: "https://www.djangoproject.com/"
     },
     {
         name: "Django Rest Framework",
-        icon: djangoRestFrameworkLogo
+        icon: djangoRestFrameworkLogo,
+        url: "https://www.django-rest-framework.org/"
     },
     {
         name: "PostgreSQL",
-        icon: postgreSQLLogo
+        icon: postgreSQLLogo,
+        url: "https://www.postgresql.org/"
     },
     {
         name: "Docker",
-        icon: dockerLogo
+        icon: dockerLogo,
+        url: "https://www.docker.com/"
     },
     {
         name: "HTML5",
-        icon: html5Logo
+        icon: html5Logo,
+        url: "https://en.wikipedia.org/wiki/HTML5"
     },
     {
         name: "CSS3",
-        icon: css3Logo
+        icon: css3Logo,
+        url: "https://en.wikipedia.org/wiki/CSS"
     },
     {
         name: "Javascript",
-        icon: javascriptLogo
+        icon: javascriptLogo,
+        url: "https://en.wikipedia.org/wiki/JavaScript"
     },
     {
         name: "Typescript",
-        icon: typeScriptLogo
+        icon: typeScriptLogo,
+        url: "https://www.typescriptlang.org/"
     },
     {
         name: "React",
-        icon: reactLogo
+        icon: reactLogo,
+        url: "https://reactjs.org/"
     },
     {
         name: "TailwindCSS",
-        icon: tailwindCssLogo
+        icon: tailwindCssLogo,
+        url: "https://tailwindcss.com/"
     },
     {
         name: "Material-UI",
-        icon: materialUILogo
+        icon: materialUILogo,
+        url: "https://mui.com/"
     },
     {
         name: "GIT",
-        icon: gitLogo
+        icon: gitLogo,
+        url: "https://git-scm.com/about"
     },
 ]
 
@@ -109,6 +122,7 @@ export const AboutMe = () => {
                                                             key={technology.name}
                                                             image={technology.icon}
                                                             name={technology.name}
+                                                            url={technology.url}
                                                         />
                                                     )
                                                 })

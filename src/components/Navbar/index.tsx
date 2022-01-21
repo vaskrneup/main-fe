@@ -16,10 +16,10 @@ export const Navbar = () => {
                                 />
                             </div>
                             <ul className="navigation-link">
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Projects</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="#" className="animated-line">About</a></li>
+                                <li><a href="#" className="animated-line">Projects</a></li>
+                                <li><a href="#" className="animated-line">Blog</a></li>
+                                <li><a href="#" className="animated-line">Contact</a></li>
                             </ul>
                         </div>
                     </div>
