@@ -3,7 +3,7 @@
 	--navbar-background-color: #041c3295;
 
 	--link-color: #e6ac4e;
-	--link-hover-color: #ffd795;
+	--link-hover-color: #ff9f00;
 
 	--main-text-color: #ffffff;
 	--lighter-text-color: #aefeff;
@@ -40,10 +40,13 @@ a {
 	text-decoration: none;
 	font-weight: 600;
 	position: relative;
+	transition: color 300ms;
 }
 
-/* a:hover {
+a:hover {
 	color: var(--link-hover-color);
-	border-bottom: 1px solid var(--link-color);
-	border-width: 100%;
-} */
+}
+
+.view-more {
+	display: none;
+}

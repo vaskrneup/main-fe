@@ -3,7 +3,7 @@
 }
 
 .section-container:hover .container {
-	transform: scale(1.04);
+	transform: scale(1.02);
 }
 
 .section-container .section-title {
