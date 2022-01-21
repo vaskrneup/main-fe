@@ -89,7 +89,7 @@ const TECHNOLOGIES_I_HAVE_WORKED_WITH_LIST: techIconAndName[] = [
 export const AboutMe = () => {
     return (
         <Section>
-            <div className="aboutme-section">
+            <div className="aboutme-section" id="about-me">
                 <div className="container">
                     <div className="aboutme">
                         <h3 className="section-title">

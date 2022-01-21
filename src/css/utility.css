@@ -54,3 +54,13 @@
 	width: 100%;
 	left: 0;
 }
+
+.link-btn {
+	font-size: 1.2rem;
+	transition: color 300ms, transform 300ms;
+}
+
+.link-btn:hover {
+	color: var(--link-hover-color);
+	transform: scale(1.2);
+}

@@ -36,7 +36,7 @@ export const ProjectView = (props: projectViewPropsDatatype) => {
                                 href={props.githubLink}
                                 target={"_blank"}
                             >
-                                G
+                                <i className="fab fa-github link-btn"></i>
                             </a>
                             :
                             null
@@ -48,7 +48,7 @@ export const ProjectView = (props: projectViewPropsDatatype) => {
                                 href={props.demoLink}
                                 target={"_blank"}
                             >
-                                E
+                                <i className="fas fa-external-link-alt link-btn"></i>
                             </a>
                             :
                             null

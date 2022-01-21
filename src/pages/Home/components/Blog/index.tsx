@@ -16,7 +16,7 @@ const BLOG_DATA: blogViewPropsDatatype[] = [
 export const Blog = () => {
     return (
         <Section>
-            <div className="blog-container">
+            <div className="blog-container" id="blog">
                 <div className="container">
                     <h3 className="section-title">
                         BLOGS

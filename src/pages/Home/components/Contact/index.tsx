@@ -17,15 +17,14 @@ export const Contact = () => {
     }
     const handleFormSubmission = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-
     }
 
     return (
         <Section>
-            <div className="contact-container">
+            <div className="contact-container" id="contact">
                 <div className="container">
                     <h3 className="section-title">
-                        Get in Touch
+                        GET IN TOUCH
                     </h3>
 
                     <div className="section-body">

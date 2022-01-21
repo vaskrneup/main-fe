@@ -2,8 +2,8 @@ import { Section } from "../Section";
 import { ProjectView } from "./components/ProjectView"
 import "./projects.css";
 import { projectViewPropsDatatype } from "./components/ProjectView/datatypes";
-import projectBGImage from "../../../../global_assets/images/projects_bg/FIRST_PROJECT.png";
 import spreadsheetImage from "./assets/images/project_bg/spreadsheet.png";
+import flappyBirdImage from "./assets/images/project_bg/flappy_bird.png";
 
 
 const PORJECT_DATA: projectViewPropsDatatype[] = [
@@ -19,7 +19,7 @@ const PORJECT_DATA: projectViewPropsDatatype[] = [
     },
     {
         mainLink: "https://flappybird.vaskrneup.com",
-        projectImage: projectBGImage,
+        projectImage: flappyBirdImage,
         projectName: "Flappy Bird Game",
         projectFor: "Leapfrog Technology, Internship",
         githubLink: "https://github.com/vaskrneup/FlappyBird",
@@ -33,7 +33,7 @@ const PORJECT_DATA: projectViewPropsDatatype[] = [
 export const Projects = () => {
     return (
         <Section>
-            <div className="project-view">
+            <div className="project-view" id="projects">
                 <div className="container">
                     <h3 className="section-title">
                         PROJECTS

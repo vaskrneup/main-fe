@@ -84,3 +84,17 @@
 	height: 20vh;
 	background-color: var(--main-text-color);
 }
+
+.public-profile-link {
+	font-size: 1.5rem;
+	padding: 0.25rem;
+	transition: transform 300ms;
+	color: red;
+}
+
+.public-profile-link:hover {
+	transform: scale(1.2);
+}
+.public-profile-link:hover i {
+	color: var(--link-hover-color);
+}

@@ -1,6 +1,50 @@
+import React from "react";
 import { Section } from "../../pages/Home/components/Section";
 import { LogoMaker } from "../LogoMaker";
 import "./index.css";
+
+
+
+const SOCIAL_SITES = [
+    {
+        profileLink: "https://www.linkedin.com/in/vaskrneup/",
+        iconClass: "fab fa-linkedin"
+    },
+    {
+        profileLink: "https://stackoverflow.com/users/10212936/vaskrneup",
+        iconClass: "fab fa-stack-overflow"
+    },
+
+    {
+        profileLink: "https://github.com/vaskrneup",
+        iconClass: "fab fa-github"
+    },
+    {
+        profileLink: "https://instagram.com/vaskrneup",
+        iconClass: "fab fa-instagram"
+    },
+    {
+        profileLink: "https://twitter.com/vaskrneup",
+        iconClass: "fab fa-twitter"
+    },
+    {
+        profileLink: "mailto:bhaskar@vaskrneup.com",
+        iconClass: "far fa-envelope"
+    },
+]
+
+const scrollManager = (sectionId: string) => {
+    const scrollToSection = (e: React.MouseEvent) => {
+        e.preventDefault()
+        const offsetValue = document.getElementById(sectionId)?.offsetTop;
+
+        window.scrollTo({
+            top: (offsetValue ? offsetValue - 70 : offsetValue),
+            behavior: "smooth"
+        })
+    }
+    return scrollToSection;
+}
 
 export const Navbar = () => {
     return (
@@ -9,28 +53,69 @@ export const Navbar = () => {
                 <nav className="navbar-container">
                     <div className="container">
                         <div className="navbar">
-                            <div className="logo-section">
+                            <div className="logo-section" onClick={scrollManager("intro")}>
                                 <LogoMaker
                                     mainChar="V"
                                     name="askr"
                                 />
                             </div>
                             <ul className="navigation-link">
-                                <li><a href="#" className="animated-line">About</a></li>
-                                <li><a href="#" className="animated-line">Projects</a></li>
-                                <li><a href="#" className="animated-line">Blog</a></li>
-                                <li><a href="#" className="animated-line">Contact</a></li>
+                                <li>
+                                    <a
+                                        href="#"
+                                        onClick={scrollManager("about-me")}
+                                        className="animated-line">
+                                        About
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="#"
+                                        className="animated-line"
+                                        onClick={scrollManager("projects")}
+                                    >
+                                        Projects
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="#"
+                                        className="animated-line"
+                                        onClick={scrollManager("blog")}
+                                    >
+                                        Blog
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="#"
+                                        className="animated-line"
+                                        onClick={scrollManager("contact")}
+                                    >
+                                        Contact
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </nav>
-                <div className="navbar-bottom-detail left-line">
-                    <div className="vertical-line">
-                        &nbsp;
-                    </div>
-                </div>
                 <div className="navbar-bottom-detail right-line">
-                    <a href="mailto:abc@example.com">bhaskar@vaskrneup.com</a>
+                    {
+                        SOCIAL_SITES.map(
+                            (site) => {
+                                return (
+                                    <a
+                                        target={"_blank"}
+                                        href={site.profileLink}
+                                        key={site.iconClass}
+                                        className="public-profile-link"
+                                    >
+                                        <i className={site.iconClass}></i>
+                                    </a>
+                                )
+                            }
+                        )
+                    }
                     <div className="vertical-line">
                         &nbsp;
                     </div>
