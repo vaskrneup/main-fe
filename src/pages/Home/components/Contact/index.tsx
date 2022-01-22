@@ -37,7 +37,7 @@ export const Contact = () => {
                                         Wether you have a question, want to talk about tech or project collaboration, or  just want to say hi. My inbox is always open. You can directly email me at <a href="mailto:bhaskar@vaskrneup.com" className="animated-line" onClick={changeActivePageWrapper("/contact-me/through-email/")}>bhaskar@vaskrneup.com</a> or say hello using the following form or connect with me in any of my social media account. I&apos;ll get back to you as soon as possible!
                                     </p>
                                     <div className="contact-form-container">
-                                        <form action="#" onSubmit={handleFormSubmission}>
+                                        <form action="https://formsubmit.co/bhaskar@vaskrneup.com" >
                                             <div className="name-email-container">
                                                 <div className="input-container">
                                                     <label htmlFor="full-name">Full Name</label>
@@ -47,6 +47,7 @@ export const Contact = () => {
                                                         type="text"
                                                         name="full_name"
                                                         placeholder="Bhaskar Neupane"
+                                                        required={true}
                                                     />
                                                 </div>
                                                 <div className="input-container">
@@ -57,6 +58,7 @@ export const Contact = () => {
                                                         type="text"
                                                         name="email"
                                                         placeholder="bhaskar@vaskrneup.com"
+                                                        required={true}
                                                     />
                                                 </div>
                                             </div>
@@ -70,6 +72,7 @@ export const Contact = () => {
                                                         name="message"
                                                         cols={30}
                                                         rows={10}
+                                                        required={true}
                                                     ></textarea>
                                                 </div>
                                             </div>
