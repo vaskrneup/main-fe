@@ -2,36 +2,8 @@ import React from "react";
 import { Section } from "../../pages/Home/components/Section";
 import { LogoMaker } from "../LogoMaker";
 import "./index.css";
+import { SOCIAL_SITES } from "../../data/socialSites";
 
-
-
-const SOCIAL_SITES = [
-    {
-        profileLink: "https://www.linkedin.com/in/vaskrneup/",
-        iconClass: "fab fa-linkedin"
-    },
-    {
-        profileLink: "https://stackoverflow.com/users/10212936/vaskrneup",
-        iconClass: "fab fa-stack-overflow"
-    },
-
-    {
-        profileLink: "https://github.com/vaskrneup",
-        iconClass: "fab fa-github"
-    },
-    {
-        profileLink: "https://instagram.com/vaskrneup",
-        iconClass: "fab fa-instagram"
-    },
-    {
-        profileLink: "https://twitter.com/vaskrneup",
-        iconClass: "fab fa-twitter"
-    },
-    {
-        profileLink: "mailto:bhaskar@vaskrneup.com",
-        iconClass: "far fa-envelope"
-    },
-]
 
 const scrollManager = (sectionId: string) => {
     const scrollToSection = (e: React.MouseEvent) => {

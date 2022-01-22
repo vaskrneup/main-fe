@@ -1,17 +1,8 @@
 import { Section } from "../Section";
 import "./blog.css";
 import { BlogView } from "./components/BlogView";
-import { blogViewPropsDatatype } from "./components/BlogView/datatypes";
+import { BLOG_DATA } from "../../../../data/blogData";
 
-const BLOG_DATA: blogViewPropsDatatype[] = [
-    {
-        blogTitle: "First Blog",
-        blogDescription: "Just a Test Blog, Nothing Much!!",
-        blogTags: ["blog", "test"],
-        creationDate: "Jan 17, 2022",
-        readTime: "3 Min"
-    },
-]
 
 export const Blog = () => {
     return (
