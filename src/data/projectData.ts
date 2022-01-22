@@ -1,6 +1,7 @@
 import { projectViewPropsDatatype } from "../pages/Home/components/Projects/components/ProjectView/datatypes";
-import spreadsheetImage from "./assets/images/project_bg/spreadsheet.png";
-import flappyBirdImage from "./assets/images/project_bg/flappy_bird.png";
+import spreadsheetImage from "../global_assets/images/projects_bg/spreadsheet.png";
+import flappyBirdImage from "../global_assets/images/projects_bg/flappy_bird.png";
+import kpnAdminImage from "../global_assets/images/projects_bg/kpn_admin.png";
 
 
 export const PROJECT_DATA: projectViewPropsDatatype[] = [
@@ -23,5 +24,14 @@ export const PROJECT_DATA: projectViewPropsDatatype[] = [
         demoLink: "http://flappybird.vaskrneup.com/",
         projectDescription: "I developed this game with plain HTML, CSS and Javascript in a single day during my internship in Leapfrog Technology. As I have never worked on making games, it was a difficult task. But like everything else, if you give it a try you can accomplish that without any issue",
         projectTags: ["project", "javascript", "html", "css", "game", "flappy-bird"]
-    }
+    },
+    {
+        mainLink: "https://kkpn.pythonanywhere.com/",
+        projectImage: kpnAdminImage,
+        projectName: "KPN Admin",
+        projectFor: "K.P.N. & Associates",
+        demoLink: "https://kkpn.pythonanywhere.com/",
+        projectDescription: "I developed this web application, to help my uncle better manage his office status, provide better visualization of what is happening, automate daily tasks and many more.",
+        projectTags: ["project", "html", "css", "javascript", "product", "python", "django"]
+    },
 ]

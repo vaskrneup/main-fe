@@ -1,16 +1,16 @@
-import pythonLogo from "../../../../global_assets/images/technologies/PYTHON_LOGO.png";
-import djangoLogo from "../../../../global_assets/images/technologies/DJANGO_LOGO.png";
-import djangoRestFrameworkLogo from "../../../../global_assets/images/technologies/DRF_LOGO.png";
-import postgreSQLLogo from "../../../../global_assets/images/technologies/POSTGRES_LOGO.png";
-import dockerLogo from "../../../../global_assets/images/technologies/DOCKER_LOGO.png";
-import html5Logo from "../../../../global_assets/images/technologies/HTML_LOGO.png";
-import css3Logo from "../../../../global_assets/images/technologies/CSS_LOGO.png";
-import javascriptLogo from "../../../../global_assets/images/technologies/JAVASCRIPT_LOGO.png";
-import typeScriptLogo from "../../../../global_assets/images/technologies/TYPESCRIPT_LOGO.png";
-import reactLogo from "../../../../global_assets/images/technologies/REACT_JS_LOGO.png";
-import tailwindCssLogo from "../../../../global_assets/images/technologies/TAILWIND_CSS_LOGO.png";
-import materialUILogo from "../../../../global_assets/images/technologies/MUI_LOGO.png";
-import gitLogo from "../../../../global_assets/images/technologies/GIT_LOGO.png";
+import pythonLogo from "../global_assets/images/technologies/PYTHON_LOGO.png";
+import djangoLogo from "../global_assets/images/technologies/DJANGO_LOGO.png";
+import djangoRestFrameworkLogo from "../global_assets/images/technologies/DRF_LOGO.png";
+import postgreSQLLogo from "../global_assets/images/technologies/POSTGRES_LOGO.png";
+import dockerLogo from "../global_assets/images/technologies/DOCKER_LOGO.png";
+import html5Logo from "../global_assets/images/technologies/HTML_LOGO.png";
+import css3Logo from "../global_assets/images/technologies/CSS_LOGO.png";
+import javascriptLogo from "../global_assets/images/technologies/JAVASCRIPT_LOGO.png";
+import typeScriptLogo from "../global_assets/images/technologies/TYPESCRIPT_LOGO.png";
+import reactLogo from "../global_assets/images/technologies/REACT_JS_LOGO.png";
+import tailwindCssLogo from "../global_assets/images/technologies/TAILWIND_CSS_LOGO.png";
+import materialUILogo from "../global_assets/images/technologies/MUI_LOGO.png";
+import gitLogo from "../global_assets/images/technologies/GIT_LOGO.png";
 import { techIconAndName } from "../pages/Home/components/AboutMe/datatypes";
 
 
