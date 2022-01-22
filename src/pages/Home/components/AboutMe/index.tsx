@@ -101,11 +101,15 @@ export const AboutMe = () => {
                                 <div className="about-me-first">
                                     <div className="my-description">
                                         <p>
-                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis, nostrum! Velit voluptates, minus hic blanditiis quasi aliquam atque nesciunt saepe enim ipsum dolore pariatur explicabo libero quisquam culpa accusamus corporis!
+                                            Hi! my name is Bhaskar Neupane. I am a recent A-Levels graduate and a Full-Stack software developer based in Kathmandu, Nepal. My passion for programming started back in 2015 when I wrote my first proper program using QBasic to solve quadratic equations. Turns out making computer do my maths homework was a fun place to start my journey as a problem solver.
                                         </p>
                                         <br />
                                         <p>
-                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque doloribus delectus rem fuga deleniti minima, cumque, cum natus suscipit velit dolorem quibusdam magnam magni itaque molestiae repudiandae facilis illum maxime!
+                                            Currently, I am working as a Full-Stack Developer using several Technologies. Additionally, I am learning about Machine and Deep Learning and am looking forward to learn hardware side of things too.
+                                        </p>
+                                        <br />
+                                        <p>
+                                            I love to capture memories, it helps to break pattern and helps me stay creative and have a fresh mind. I have few images that I have captured in my <a href="https://instagram.com/vaskrneup" target={"_blank"} className="animated-line">instagram</a>.
                                         </p>
                                         <br />
                                     </div>

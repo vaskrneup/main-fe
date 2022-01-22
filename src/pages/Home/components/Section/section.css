@@ -11,6 +11,7 @@
 	position: relative;
 	width: fit-content;
 	padding: 0.5rem 0.25rem;
+	font-family: "Encode Sans Semi Condensed", sans-serif;
 }
 
 .section-container .section-title::after {

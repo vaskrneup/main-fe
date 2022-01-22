@@ -42,12 +42,13 @@ textarea {
 	width: fit-content;
 	background-color: var(--link-color);
 	color: white;
-	transition: box-shadow 300ms, color 300ms, border 300ms;
+	transition: box-shadow 300ms, color 300ms;
+	border: 1px solid var(--link-color);
 }
 
 .submit-btn:hover {
 	cursor: pointer;
 	color: var(--link-color);
-	border: 1px solid var(--link-color);
 	background-color: transparent;
+	border: 1px solid var(--link-color);
 }

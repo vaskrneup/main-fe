@@ -29,7 +29,7 @@
 }
 
 .my-name-title {
-	font-size: 0.75rem;
+	font-size: 1rem;
 }
 
 .name {
@@ -42,9 +42,9 @@
 
 .brief-intro {
 	padding: 1.5rem 0;
-	font-weight: lighter;
+	font-weight: normal;
 	font-size: 0.9rem;
-	max-width: 50%;
+	max-width: 55%;
 }
 
 .resume-btn {

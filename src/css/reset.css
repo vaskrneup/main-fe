@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@900&family=Open+Sans&display=swap");
+
 :root {
 	--main-background-color: #041c32;
 	--navbar-background-color: #041c3295;
@@ -41,10 +43,15 @@ a {
 	font-weight: 600;
 	position: relative;
 	transition: color 300ms;
+	font-family: "Open Sans", sans-serif;
 }
 
 a:hover {
 	color: var(--link-hover-color);
+}
+
+p {
+	font-family: "Open Sans", sans-serif;
 }
 
 .view-more {
