@@ -10,10 +10,13 @@ export const PageManager = (props: pageManagerPropsDatatype) => {
     }, [])
 
     return (
-        <div className="apple" onMouseEnter={(e) => {
-            changeActivePageWrapper(props.page || "/")(e)
-            console.log(props.page)
-        }}>
+        <div
+            className="apple"
+            onMouseEnter={(e) => {
+                changeActivePageWrapper(props.page || "/")(e)
+                console.log(props.page, "scroll")
+            }}
+        >
             {props.children}
         </div>
     )
