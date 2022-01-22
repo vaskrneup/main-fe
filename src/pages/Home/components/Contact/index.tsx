@@ -1,4 +1,5 @@
 import React, { FormEvent, useState } from "react";
+import { changeActivePageWrapper } from "../../../../components/PageManager/utils";
 import { Section } from "../Section";
 import "./contact.css";
 
@@ -31,7 +32,7 @@ export const Contact = () => {
                         <div className="contact">
                             <div className="contact-main-content">
                                 <p>
-                                    Wether you have a question, want to talk about tech or project collaboration, or  just want to say hi. My inbox is always open. You can directly email me at <a href="mailto:bhaskar@vaskrneup.com" className="animated-line">bhaskar@vaskrneup.com</a> or say hello using the following form or connect with me in any of my social media account. I&apos;ll get back to you as soon as possible!
+                                    Wether you have a question, want to talk about tech or project collaboration, or  just want to say hi. My inbox is always open. You can directly email me at <a href="mailto:bhaskar@vaskrneup.com" className="animated-line" onClick={changeActivePageWrapper("/contact-me/through-email/")}>bhaskar@vaskrneup.com</a> or say hello using the following form or connect with me in any of my social media account. I&apos;ll get back to you as soon as possible!
                                 </p>
                                 <div className="contact-form-container">
                                     <form action="#" onSubmit={handleFormSubmission}>
@@ -76,6 +77,7 @@ export const Contact = () => {
                                                 type="submit"
                                                 value="Say Hello!"
                                                 className="submit-btn"
+                                                onClick={changeActivePageWrapper("contact-me/say-hello-button-press")}
                                             />
                                         </div>
                                     </form>

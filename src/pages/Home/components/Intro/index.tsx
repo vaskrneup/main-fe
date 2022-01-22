@@ -1,5 +1,5 @@
+import { changeActivePageWrapper } from "../../../../components/PageManager/utils";
 import "./index.css";
-
 
 export const Intro = () => {
     return (
@@ -25,6 +25,7 @@ export const Intro = () => {
                             href="https://drive.google.com/file/d/1516EXritCUF9ReQJXspGLepwF6mNbaaz/view?usp=sharing"
                             target={"_blank"}
                             className="resume-btn button"
+                            onClick={changeActivePageWrapper("resume")}
                         >
                             RESUME
                         </a>

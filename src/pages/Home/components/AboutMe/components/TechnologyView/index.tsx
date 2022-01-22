@@ -4,7 +4,7 @@ import { technologyViewPropsType } from "./datatypes"
 
 export const TechnologyView = (props: technologyViewPropsType) => {
     return (
-        <a href={props.url} target="_blank">
+        <a href={props.url} target="_blank" onClick={props.onClick}>
             <div className="technology-view">
                 <img
                     src={props.image}
@@ -14,6 +14,6 @@ export const TechnologyView = (props: technologyViewPropsType) => {
                     {props.name}
                 </span>
             </div>
-        </a>
+        </a >
     )
 }

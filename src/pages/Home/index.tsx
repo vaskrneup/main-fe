@@ -5,15 +5,18 @@ import { AboutMe } from "./components/AboutMe";
 import { Projects } from "./components/Projects";
 import { Blog } from "./components/Blog";
 import { Contact } from "./components/Contact";
+import { PageManager } from "../../components/PageManager";
 
 export const Home = () => {
     return (
-        <Layout>
-            <Intro />
-            <AboutMe />
-            <Projects />
-            <Blog />
-            <Contact />
-        </Layout>
+        <PageManager page="/">
+            <Layout>
+                <Intro />
+                <AboutMe />
+                <Projects />
+                <Blog />
+                <Contact />
+            </Layout>
+        </PageManager>
     )
 }

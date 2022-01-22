@@ -3,6 +3,7 @@ import { Section } from "../../pages/Home/components/Section";
 import { LogoMaker } from "../LogoMaker";
 import "./index.css";
 import { SOCIAL_SITES } from "../../data/socialSites";
+import { changeActivePage, changeActivePageWrapper } from "../PageManager/utils";
 
 
 const scrollManager = (sectionId: string) => {
@@ -25,7 +26,10 @@ export const Navbar = () => {
                 <nav className="navbar-container">
                     <div className="container">
                         <div className="navbar">
-                            <div className="logo-section" onClick={scrollManager("intro")}>
+                            <div className="logo-section" onClick={(e) => {
+                                scrollManager("intro")(e);
+                                changeActivePage("intro");
+                            }}>
                                 <LogoMaker
                                     mainChar="V"
                                     name="askr"
@@ -35,7 +39,10 @@ export const Navbar = () => {
                                 <li>
                                     <a
                                         href="#"
-                                        onClick={scrollManager("about-me")}
+                                        onClick={(e) => {
+                                            scrollManager("about-me")(e);
+                                            changeActivePage("about-me");
+                                        }}
                                         className="animated-line">
                                         About
                                     </a>
@@ -44,7 +51,10 @@ export const Navbar = () => {
                                     <a
                                         href="#"
                                         className="animated-line"
-                                        onClick={scrollManager("projects")}
+                                        onClick={(e) => {
+                                            scrollManager("projects")(e)
+                                            changeActivePage("projects");
+                                        }}
                                     >
                                         Projects
                                     </a>
@@ -53,7 +63,10 @@ export const Navbar = () => {
                                     <a
                                         href="#"
                                         className="animated-line"
-                                        onClick={scrollManager("blog")}
+                                        onClick={(e) => {
+                                            scrollManager("blog")(e)
+                                            changeActivePage("blog");
+                                        }}
                                     >
                                         Blog
                                     </a>
@@ -62,7 +75,10 @@ export const Navbar = () => {
                                     <a
                                         href="#"
                                         className="animated-line"
-                                        onClick={scrollManager("contact")}
+                                        onClick={(e) => {
+                                            scrollManager("contact")(e);
+                                            changeActivePage("contact");
+                                        }}
                                     >
                                         Contact
                                     </a>
@@ -81,6 +97,7 @@ export const Navbar = () => {
                                         href={site.profileLink}
                                         key={site.iconClass}
                                         className="public-profile-link"
+                                        onClick={changeActivePageWrapper(`/social-site-through-main/${site}`)}
                                     >
                                         <i className={site.iconClass}></i>
                                     </a>

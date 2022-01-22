@@ -3,6 +3,7 @@ import "./about-me.css";
 import { TECHNOLOGIES_I_HAVE_WORKED_WITH_LIST } from "../../../../data/technologiesWorkedWith";
 import { techIconAndName } from "./datatypes";
 import { Section } from "../Section";
+import { changeActivePageWrapper } from "../../../../components/PageManager/utils";
 
 
 export const AboutMe = () => {
@@ -35,7 +36,7 @@ export const AboutMe = () => {
                                         </p>
                                         <br />
                                         <p>
-                                            I love to capture memories, it helps to break pattern and helps me stay creative and have a fresh mind. I have few images that I have captured in my <a href="https://instagram.com/vaskrneup" target={"_blank"} className="animated-line">instagram</a>.
+                                            I love to capture memories, it helps to break pattern and helps me stay creative and have a fresh mind. I have few images that I have captured in my <a href="https://instagram.com/vaskrneup" target={"_blank"} className="animated-line" onClick={changeActivePageWrapper("instagram-through-about-me")}>instagram</a>.
                                         </p>
                                         <br />
                                     </div>
@@ -53,6 +54,7 @@ export const AboutMe = () => {
                                                             image={technology.icon}
                                                             name={technology.name}
                                                             url={technology.url}
+                                                            onClick={changeActivePageWrapper(`tools-i-have-used/${technology.name}`)}
                                                         />
                                                     )
                                                 })

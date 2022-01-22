@@ -2,6 +2,7 @@ import { Chip } from "../../../../../../components/Chip"
 import "./project_view.css"
 import { projectViewPropsDatatype } from "./datatypes";
 import { HR } from "../../../../../../components/HR";
+import { changeActivePageWrapper } from "../../../../../../components/PageManager/utils";
 
 
 export const ProjectView = (props: projectViewPropsDatatype) => {
@@ -23,6 +24,7 @@ export const ProjectView = (props: projectViewPropsDatatype) => {
                             href={props.mainLink}
                             target={"_blank"}
                             className="project-name"
+                            onClick={changeActivePageWrapper(`project-mainlink-${props.projectName}?redirect="${props.mainLink}"`)}
                         >
                             {props.projectName}
                         </a>
@@ -35,6 +37,7 @@ export const ProjectView = (props: projectViewPropsDatatype) => {
                             <a
                                 href={props.githubLink}
                                 target={"_blank"}
+                                onClick={changeActivePageWrapper(`project-github-link-${props.projectName}?redirect="${props.githubLink}"`)}
                             >
                                 <i className="fab fa-github link-btn"></i>
                             </a>
@@ -47,6 +50,7 @@ export const ProjectView = (props: projectViewPropsDatatype) => {
                             <a
                                 href={props.demoLink}
                                 target={"_blank"}
+                                onClick={changeActivePageWrapper(`project-demo-link-${props.projectName}?redirect="${props.demoLink}"`)}
                             >
                                 <i className="fas fa-external-link-alt link-btn"></i>
                             </a>
