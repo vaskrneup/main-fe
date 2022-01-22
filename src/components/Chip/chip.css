@@ -1,7 +1,0 @@
-.chip {
-	font-size: 0.7rem;
-	width: fit-content;
-	background-color: var(--chips-background-color);
-	padding: 0.25rem 0.75rem;
-	border-radius: 0.7rem;
-}
