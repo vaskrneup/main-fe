@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.7d8270cc.css",
-    "main.js": "/static/js/main.66ef228b.js",
+    "main.js": "/static/js/main.19f1d148.js",
     "static/js/787.ce0d555a.chunk.js": "/static/js/787.ce0d555a.chunk.js",
     "static/media/nepal_mountain.jpg": "/static/media/nepal_mountain.73fb19b10238659a90ee.jpg",
     "static/media/spreadsheet.png": "/static/media/spreadsheet.9b8d1a83ad2fc75bacae.png",
@@ -9,11 +9,11 @@
     "static/media/flappy_bird.png": "/static/media/flappy_bird.f465a0e86d1086b5a565.png",
     "index.html": "/index.html",
     "main.7d8270cc.css.map": "/static/css/main.7d8270cc.css.map",
-    "main.66ef228b.js.map": "/static/js/main.66ef228b.js.map",
+    "main.19f1d148.js.map": "/static/js/main.19f1d148.js.map",
     "787.ce0d555a.chunk.js.map": "/static/js/787.ce0d555a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7d8270cc.css",
-    "static/js/main.66ef228b.js"
+    "static/js/main.19f1d148.js"
   ]
 }
