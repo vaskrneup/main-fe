@@ -52,3 +52,19 @@ textarea {
 	background-color: transparent;
 	border: 1px solid var(--link-color);
 }
+
+@media screen and (max-width: 992px) {
+	.contact-form-container {
+		padding: 2rem;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.contact-form-container {
+		padding: 1rem;
+	}
+
+	.name-email-container {
+		grid-template-columns: auto;
+	}
+}

@@ -46,3 +46,50 @@
 	width: 100%;
 	object-fit: contain;
 }
+
+.first-img-container {
+	display: none;
+	width: 25rem;
+	height: 25rem;
+}
+
+@media screen and (max-width: 992px) {
+	.content {
+		flex-direction: column;
+	}
+
+	.about-me-first {
+		width: 100%;
+	}
+
+	.first-img-main-container {
+		width: 100%;
+	}
+
+	.first-img-container {
+		display: block;
+		width: 15rem;
+		height: 15rem;
+		margin: 0 auto 2rem auto;
+	}
+
+	.image {
+		object-fit: contain;
+	}
+
+	.second-img-container {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.technologies-grid {
+		grid-template-columns: auto auto;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.technologies-grid {
+		grid-template-columns: auto;
+	}
+}

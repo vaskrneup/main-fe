@@ -70,7 +70,7 @@
 	position: fixed;
 	bottom: 0;
 	right: 1rem;
-	backdrop-filter: blur(5px);
+	backdrop-filter: blur(2px);
 	padding: 0.5rem 0.5rem 0 0.5rem;
 	border-radius: 2rem;
 }
@@ -90,7 +90,7 @@
 
 .public-profile-link {
 	font-size: 1.5rem;
-	padding: 0.25rem;
+	padding: 0.3rem;
 	transition: transform 300ms;
 	color: red;
 }
@@ -100,4 +100,15 @@
 }
 .public-profile-link:hover i {
 	color: var(--link-hover-color);
+}
+
+@media screen and (max-width: 1024px) {
+	.navbar-bottom-detail {
+		align-items: center;
+		writing-mode: unset;
+	}
+
+	.vertical-line {
+		display: none;
+	}
 }

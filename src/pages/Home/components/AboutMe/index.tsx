@@ -15,8 +15,15 @@ export const AboutMe = () => {
                             ABOUT ME
                         </h3>
                         <div className="section-body">
-
                             <div className="content">
+                                <div className="first-img-main-container">
+                                    <div className="image-container first-img-container">
+                                        <img
+                                            className="image"
+                                            src="https://pbs.twimg.com/profile_images/1265216954408689665/IkEH5P_j_400x400.jpg" alt="Bhaskar"
+                                        />
+                                    </div>
+                                </div>
                                 <div className="about-me-first">
                                     <div className="my-description">
                                         <p>
@@ -53,7 +60,7 @@ export const AboutMe = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="image-container">
+                                <div className="image-container second-img-container" id="sec">
                                     <img
                                         className="image"
                                         src="https://pbs.twimg.com/profile_images/1265216954408689665/IkEH5P_j_400x400.jpg" alt="Bhaskar"

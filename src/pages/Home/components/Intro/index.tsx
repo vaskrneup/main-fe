@@ -1,7 +1,6 @@
 import "./index.css";
 
 
-
 export const Intro = () => {
     return (
         <div className="intro-section" id="intro">

@@ -54,6 +54,10 @@ p {
 	font-family: "Open Sans", sans-serif;
 }
 
+#root {
+	overflow: hidden;
+}
+
 .view-more {
 	display: none;
 }

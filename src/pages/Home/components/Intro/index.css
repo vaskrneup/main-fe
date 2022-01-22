@@ -57,3 +57,23 @@
 .resume-btn:hover::after {
 	content: none;
 }
+
+@media screen and (max-width: 900px) {
+	.intro {
+		padding: 25vh 8%;
+	}
+
+	.brief-intro {
+		max-width: 70%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.intro {
+		padding: 16vh 5%;
+	}
+
+	.brief-intro {
+		max-width: 70%;
+	}
+}
