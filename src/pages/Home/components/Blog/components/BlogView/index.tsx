@@ -3,13 +3,18 @@ import { HR } from "../../../../../../components/HR";
 import { changeActivePageWrapper } from "../../../../../../components/PageManager/utils";
 import "./blog_view.css";
 import { blogViewPropsDatatype } from "./datatypes";
+import { Link } from "react-router-dom";
 
 
 export const BlogView = (props: blogViewPropsDatatype) => {
     return (
         <div className="blog-view-container">
             <div className="blog-view-top-section">
-                <h2><a href="#" onClick={changeActivePageWrapper(`/blogs/${props.blogTitle}`)}>{props.blogTitle}</a></h2>
+                <h2>
+                    <Link to={`/blog/${props.id}`} onClick={changeActivePageWrapper(`/blogs/${props.id}`)}>
+                        {props.blogTitle}
+                    </Link>
+                </h2>
                 <p className="description">
                     {props.blogDescription}
                 </p>

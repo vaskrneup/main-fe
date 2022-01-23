@@ -64,3 +64,16 @@
 	color: var(--link-hover-color);
 	transform: scale(1.2);
 }
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.fadein-animation {
+	animation: fadein 3s;
+}

@@ -3,6 +3,7 @@ import "./blog.css";
 import { BlogView } from "./components/BlogView";
 import { BLOG_DATA } from "../../../../data/blogData";
 import { PageManager } from "../../../../components/PageManager";
+import { Link } from "react-router-dom";
 
 
 export const Blog = () => {
@@ -30,7 +31,7 @@ export const Blog = () => {
                                 </div>
                             </div>
                             <div className="view-more-link-container">
-                                <a href="#" className="view-more animated-line">VIEW MORE</a>
+                                <Link to="/blog" className="view-more animated-line">VIEW MORE</Link>
                             </div>
                         </div>
                     </div>

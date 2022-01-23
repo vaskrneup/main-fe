@@ -4,18 +4,23 @@ import { LogoMaker } from "../LogoMaker";
 import "./index.css";
 import { SOCIAL_SITES } from "../../data/socialSites";
 import { changeActivePage, changeActivePageWrapper } from "../PageManager/utils";
+import { Link } from "react-router-dom";
 
 
-const scrollManager = (sectionId: string) => {
+const scrollManager = (sectionId: string, preventDefault: boolean = true) => {
     const scrollToSection = (e: React.MouseEvent) => {
-        e.preventDefault()
-        const offsetValue = document.getElementById(sectionId)?.offsetTop;
+        if (preventDefault) e.preventDefault();
 
-        window.scrollTo({
-            top: (offsetValue ? offsetValue - 70 : offsetValue),
-            behavior: "smooth"
-        })
+        setTimeout(() => {
+            const offsetValue = document.getElementById(sectionId)?.offsetTop;
+
+            window.scrollTo({
+                top: (offsetValue ? offsetValue - 70 : offsetValue),
+                behavior: "smooth"
+            })
+        }, window.location.pathname === "/" ? 30 : 300)
     }
+
     return scrollToSection;
 }
 
@@ -26,62 +31,66 @@ export const Navbar = () => {
                 <nav className="navbar-container">
                     <div className="container">
                         <div className="navbar">
-                            <div className="logo-section" onClick={(e) => {
-                                scrollManager("intro")(e);
-                                changeActivePage("intro");
-                            }}>
+                            <Link
+                                className="logo-section"
+                                to="/"
+                                onClick={(e) => {
+                                    scrollManager("intro", false,)(e);
+                                    changeActivePage("intro");
+                                }}
+                            >
                                 <LogoMaker
                                     mainChar="V"
                                     name="askr"
                                 />
-                            </div>
+                            </Link>
                             <ul className="navigation-link">
                                 <li>
-                                    <a
-                                        href="#"
+                                    <Link
+                                        to="/"
                                         onClick={(e) => {
-                                            scrollManager("about-me")(e);
+                                            scrollManager("about-me", false)(e);
                                             changeActivePage("about-me");
                                         }}
                                         className="animated-line">
                                         About
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a
-                                        href="#"
+                                    <Link
+                                        to="/"
                                         className="animated-line"
                                         onClick={(e) => {
-                                            scrollManager("projects")(e)
+                                            scrollManager("projects", false)(e)
                                             changeActivePage("projects");
                                         }}
                                     >
                                         Projects
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a
-                                        href="#"
+                                    <Link
+                                        to="/"
                                         className="animated-line"
                                         onClick={(e) => {
-                                            scrollManager("blog")(e)
+                                            scrollManager("blog", false)(e)
                                             changeActivePage("blog");
                                         }}
                                     >
                                         Blog
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a
-                                        href="#"
+                                    <Link
+                                        to="/"
                                         className="animated-line"
                                         onClick={(e) => {
-                                            scrollManager("contact")(e);
+                                            scrollManager("contact", false)(e);
                                             changeActivePage("contact");
                                         }}
                                     >
                                         Contact
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>

@@ -20,11 +20,13 @@
 }
 
 * {
+	color: var(--main-text-color);
+}
+
+:not(.markdown-container *, i) {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-
-	color: var(--main-text-color);
 	font-family: var(--default-font);
 }
 
@@ -56,8 +58,5 @@ p {
 
 #root {
 	overflow: hidden;
-}
-
-.view-more {
-	display: none;
+	min-height: 100vh;
 }
