@@ -1,34 +1,31 @@
-import axios from "axios"
-import { useEffect, useState } from "react"
-import { blogViewPropsDatatype, optionalBlogViewPropsDatatype } from "../../Home/components/Blog/components/BlogView/datatypes"
+import { Layout } from "../../../components/Layout";
+import { PageManager } from "../../../components/PageManager";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown"
-import { Layout } from "../../../components/Layout"
-
-import "./blog_detail_view.css"
-import { getBlogDataFromIdentifier } from "../../../data/blogData"
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { getProjectDataFromIdentifier, optionalProjectViewPropsDatatype, projectViewPropsDatatype } from "../../Home/components/Projects/components/ProjectView/datatypes";
+import axios from "axios";
+import remarkGfm from 'remark-gfm'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus as codeBlockTheme } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import remarkGfm from 'remark-gfm'
-import { PageManager } from "../../../components/PageManager"
 
 
-export const BlogDetailView = (props?: blogViewPropsDatatype | optionalBlogViewPropsDatatype) => {
+export const ProjectDetailView = (props?: optionalProjectViewPropsDatatype | projectViewPropsDatatype) => {
     const [blogMarkdown, setBlogMarkdown] = useState("");
-    const params = useParams<{ blogId: string }>();
+    const params = useParams<{ projectId: string }>();
 
     useEffect(() => {
         if (params !== undefined) {
-            props = getBlogDataFromIdentifier({ value: params.blogId })
+            props = getProjectDataFromIdentifier({ value: params.projectId })
         }
 
-        if (props?.blogMarkdownLink) {
-            axios.get(props.blogMarkdownLink)
+        if (props?.projectDetailsMarkdownLink) {
+            axios.get(props.projectDetailsMarkdownLink)
                 .then(resp => {
                     setBlogMarkdown(resp.data);
                 })
                 .catch(err => {
-                    setBlogMarkdown(`## Error occured when fetching blog post.\n\n${err} `)
+                    setBlogMarkdown(`## Error occured when fetching Project's Detail.\n\n${err} `)
                 })
         }
     }, [])

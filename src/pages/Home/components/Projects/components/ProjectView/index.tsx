@@ -3,9 +3,34 @@ import "./project_view.css"
 import { projectViewPropsDatatype } from "./datatypes";
 import { HR } from "../../../../../../components/HR";
 import { changeActivePageWrapper } from "../../../../../../components/PageManager/utils";
+import { Link } from "react-router-dom";
 
 
 export const ProjectView = (props: projectViewPropsDatatype) => {
+    let linkExtras: {
+        to?: string,
+        onClick: any,
+        className: string,
+        href?: string,
+        target?: string
+    } = {
+        className: "project-name",
+        onClick: window.location.pathname === "/" ? changeActivePageWrapper(`project-mainlink-${props.projectName}?redirect="${props.mainLink}"`) : undefined
+    };
+
+    if (props.projectDetailsMarkdownLink) {
+        linkExtras = {
+            ...linkExtras,
+            to: `/project/${props.id}`,
+        };
+    } else {
+        linkExtras = {
+            ...linkExtras,
+            href: props.mainLink,
+            target: "_blank",
+        };
+    }
+
     return (
         <div
             className="project-container"
@@ -20,14 +45,14 @@ export const ProjectView = (props: projectViewPropsDatatype) => {
             <div className="top-container">
                 <div className="project-title-container">
                     <h2>
-                        <a
-                            href={props.mainLink}
-                            target={"_blank"}
-                            className="project-name"
-                            onClick={changeActivePageWrapper(`project-mainlink-${props.projectName}?redirect="${props.mainLink}"`)}
+                        {linkExtras.to ? <Link
+                            to={linkExtras.to}
+                            {...linkExtras}
                         >
                             {props.projectName}
-                        </a>
+                        </Link> :
+                            <a {...linkExtras}>{props.projectName}</a>
+                        }
                     </h2>
                     <h4 className="project-for">{props.projectFor}</h4>
                 </div>

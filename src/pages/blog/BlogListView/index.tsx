@@ -4,33 +4,36 @@ import { Layout } from "../../../components/Layout";
 
 import "../../Home/components/Blog/blog.css";
 import "./blog_list_view.css"
+import { PageManager } from "../../../components/PageManager";
 
 
 export const BlogListView = () => {
     return (
-        <Layout>
-            <div className="blog-container" id="blog">
-                <div className="container">
-                    <h2 className="page-title">My Blogs</h2>
+        <PageManager>
+            <Layout>
+                <div className="blog-container" id="blog">
+                    <div className="container">
+                        <h2 className="page-title">My Blogs</h2>
 
-                    <div className="section-body">
-                        <div className="blog">
-                            <div className="blogs-container">
-                                {
-                                    BLOG_DATA.map(
-                                        (blog) => (
-                                            <BlogView
-                                                key={blog.blogTitle}
-                                                {...blog}
-                                            />
+                        <div className="section-body">
+                            <div className="blog">
+                                <div className="blogs-container">
+                                    {
+                                        BLOG_DATA.map(
+                                            (blog) => (
+                                                <BlogView
+                                                    key={blog.blogTitle}
+                                                    {...blog}
+                                                />
+                                            )
                                         )
-                                    )
-                                }
+                                    }
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </Layout>
+            </Layout>
+        </PageManager>
     )
 }

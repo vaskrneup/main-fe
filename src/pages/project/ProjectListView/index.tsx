@@ -1,19 +1,18 @@
-import { Section } from "../Section";
-import { ProjectView } from "./components/ProjectView"
-import "./projects.css";
-import { projectViewPropsDatatype } from "./components/ProjectView/datatypes";
-import { PROJECT_DATA } from "../../../../data/projectData";
-import { PageManager } from "../../../../components/PageManager";
-import { Link } from "react-router-dom";
+import { Layout } from "../../../components/Layout"
+import { PROJECT_DATA } from "../../../data/projectData"
+import { PageManager } from "../../../components/PageManager"
+import { projectViewPropsDatatype } from "../../Home/components/Projects/components/ProjectView/datatypes"
+import { ProjectView } from "../../Home/components/Projects/components/ProjectView"
+import "./project_list_view.css";
 
 
-export const Projects = () => {
+export const ProjectListView = () => {
     return (
-        <PageManager page="scroll-projects">
-            <Section>
+        <PageManager>
+            <Layout>
                 <div className="project-view" id="projects">
                     <div className="container">
-                        <h3 className="section-title">
+                        <h3 className="page-title">
                             PROJECTS
                         </h3>
                         <div className="section-body">
@@ -29,18 +28,10 @@ export const Projects = () => {
                                     }
                                 )}
                             </div>
-                            <div className="view-more-link-container">
-                                <Link
-                                    to="/project"
-                                    className="view-more animated-line"
-                                >
-                                    VIEW MORE
-                                </Link>
-                            </div>
                         </div>
                     </div>
                 </div>
-            </Section>
+            </Layout>
         </PageManager>
     )
 }

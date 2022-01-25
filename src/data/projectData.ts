@@ -6,7 +6,9 @@ import kpnAdminImage from "../global_assets/images/projects_bg/kpn_admin.png";
 
 export const PROJECT_DATA: projectViewPropsDatatype[] = [
     {
+        id: "spreadsheet",
         mainLink: "https://sheets.vaskrneup.com/",
+        projectDetailsMarkdownLink: "",
         projectImage: spreadsheetImage,
         projectName: "Spreadsheet",
         projectFor: "Leapfrog Technology, Internship",
@@ -16,6 +18,7 @@ export const PROJECT_DATA: projectViewPropsDatatype[] = [
         projectTags: ["project", "javascript", "html", "css", "spreadsheet"]
     },
     {
+        id: "flappy-bird-game",
         mainLink: "https://flappybird.vaskrneup.com",
         projectImage: flappyBirdImage,
         projectName: "Flappy Bird Game",
@@ -26,7 +29,9 @@ export const PROJECT_DATA: projectViewPropsDatatype[] = [
         projectTags: ["project", "javascript", "html", "css", "game", "flappy-bird"]
     },
     {
+        id: "kpn-staff-management-app",
         mainLink: "https://kkpn.pythonanywhere.com/",
+        projectDetailsMarkdownLink: "",
         projectImage: kpnAdminImage,
         projectName: "KPN Admin",
         projectFor: "K.P.N. & Associates",
