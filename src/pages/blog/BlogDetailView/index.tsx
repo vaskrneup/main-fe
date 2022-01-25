@@ -24,16 +24,7 @@ export const BlogDetailView = (props?: blogViewPropsDatatype | optionalBlogViewP
         if (props?.blogMarkdownLink) {
             axios.get(props.blogMarkdownLink)
                 .then(resp => {
-                    setBlogMarkdown(
-                        `
-
-| Feature    | Support                |
-| ---------: | :--------------------- |
-| CommonMark | 100%                   |
-| GFM        | 100% w/ \`remark-gfm\` |
-                        
-                        `
-                    );
+                    setBlogMarkdown(resp.data);
                 })
                 .catch(err => {
                     setBlogMarkdown(`## Error occured when fetching blog post.\n\n${err} `)
