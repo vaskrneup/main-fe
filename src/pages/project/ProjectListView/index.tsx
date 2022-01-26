@@ -1,7 +1,7 @@
 import { Layout } from "../../../components/Layout"
 import { PROJECT_DATA } from "../../../data/projectData"
 import { PageManager } from "../../../components/PageManager"
-import { projectViewPropsDatatype } from "../../Home/components/Projects/components/ProjectView/datatypes"
+import { ProjectData } from "../../Home/components/Projects/components/ProjectView/datatypes"
 import { ProjectView } from "../../Home/components/Projects/components/ProjectView"
 import "./project_list_view.css";
 
@@ -18,11 +18,11 @@ export const ProjectListView = () => {
                         <div className="section-body">
                             <div className="projects-container">
                                 {PROJECT_DATA.map(
-                                    (project: projectViewPropsDatatype) => {
+                                    (project: ProjectData) => {
                                         return (
                                             <ProjectView
-                                                key={project.projectName}
-                                                {...project}
+                                                key={project.getAllData().projectName}
+                                                project={project}
                                             />
                                         )
                                     }

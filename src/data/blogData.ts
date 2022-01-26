@@ -1,16 +1,18 @@
-import { blogViewPropsDatatype, blogViewPropsDatatypeKeys } from "../pages/Home/components/Blog/components/BlogView/datatypes"
+import { BlogData, blogViewPropsDatatype, blogViewPropsDatatypeKeys } from "../pages/Home/components/Blog/components/BlogView/datatypes"
 
 
-export const BLOG_DATA: blogViewPropsDatatype[] = [
-    {
-        id: "first-blog",
-        blogTitle: "First Blog",
-        blogDescription: "Just a Test Blog, Nothing Much!!",
-        blogTags: ["blog", "test"],
-        creationDate: "Jan 17, 2022",
-        readTime: "3 Min",
-        blogMarkdownLink: "https://raw.githubusercontent.com/vaskrneup/IpChanger/main/README.md"
-    },
+export const BLOG_DATA: BlogData[] = [
+    new BlogData(
+        {
+            id: "first-blog",
+            blogTitle: "First Blog",
+            blogDescription: "Just a Test Blog, Nothing Much!!",
+            blogTags: ["blog", "test"],
+            creationDate: "Jan 17, 2022",
+            readTime: "3 Min",
+            blogMarkdownLink: "https://raw.githubusercontent.com/vaskrneup/IpChanger/main/README.md"
+        }
+    ),
 ]
 
 export interface getBlogDataFromIdentifierPropsType {
@@ -23,11 +25,11 @@ export const getBlogDataFromIdentifier = (
         identifier = "id",
         value
     }: getBlogDataFromIdentifierPropsType
-): (blogViewPropsDatatype | undefined) => {
+): (BlogData | undefined) => {
     if (value === undefined) return undefined;
 
     for (let i = 0; i < BLOG_DATA.length; i++) {
-        if (BLOG_DATA[i][identifier] === value) {
+        if (BLOG_DATA[i].getAllData()[identifier] === value) {
             return BLOG_DATA[i];
         }
     }

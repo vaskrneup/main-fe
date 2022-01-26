@@ -1,4 +1,5 @@
 import { PROJECT_DATA } from "../../../../../../data/projectData";
+import { DataManager } from "../../../../../../data/manager";
 
 export interface projectViewPropsDatatype {
     id: string | number,
@@ -34,16 +35,26 @@ interface getProjectDataFromIdentifierDatatype {
     value: string | number | undefined
 }
 
+export class ProjectData extends DataManager {
+    constructor(public data: projectViewPropsDatatype) {
+        super(data)
+    }
+
+    get = (key: projectViewPropsDatatypeKeysType) => {
+        return this.data[key]
+    }
+}
+
 export const getProjectDataFromIdentifier = (
     {
         identifier = "id",
         value
     }: getProjectDataFromIdentifierDatatype
-): (projectViewPropsDatatype | undefined) => {
+): (ProjectData | undefined) => {
     if (value === undefined) return undefined;
 
     for (let i = 0; i < PROJECT_DATA.length; i++) {
-        if (PROJECT_DATA[i][identifier] === value) {
+        if (PROJECT_DATA[i].get(identifier) === value) {
             return PROJECT_DATA[i];
         }
     }

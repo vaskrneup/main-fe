@@ -1,6 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { blogViewPropsDatatype, optionalBlogViewPropsDatatype } from "../../Home/components/Blog/components/BlogView/datatypes"
+import { BlogData, blogViewPropsDatatype, optionalBlogViewPropsDatatype } from "../../Home/components/Blog/components/BlogView/datatypes"
 import { ReactMarkdown } from "react-markdown/lib/react-markdown"
 import { Layout } from "../../../components/Layout"
 
@@ -13,17 +13,17 @@ import remarkGfm from 'remark-gfm'
 import { PageManager } from "../../../components/PageManager"
 
 
-export const BlogDetailView = (props?: blogViewPropsDatatype | optionalBlogViewPropsDatatype) => {
+export const BlogDetailView = ({ blog }: { blog?: BlogData }) => {
     const [blogMarkdown, setBlogMarkdown] = useState("");
     const params = useParams<{ blogId: string }>();
 
     useEffect(() => {
         if (params !== undefined) {
-            props = getBlogDataFromIdentifier({ value: params.blogId })
+            blog = getBlogDataFromIdentifier({ value: params.blogId })
         }
 
-        if (props?.blogMarkdownLink) {
-            axios.get(props.blogMarkdownLink)
+        if (blog?.getAllData().blogMarkdownLink) {
+            axios.get(blog.getAllData().blogMarkdownLink)
                 .then(resp => {
                     setBlogMarkdown(resp.data);
                 })

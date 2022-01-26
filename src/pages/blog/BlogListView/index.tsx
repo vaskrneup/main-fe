@@ -5,6 +5,7 @@ import { Layout } from "../../../components/Layout";
 import "../../Home/components/Blog/blog.css";
 import "./blog_list_view.css"
 import { PageManager } from "../../../components/PageManager";
+import { BlogData } from "../../Home/components/Blog/components/BlogView/datatypes";
 
 
 export const BlogListView = () => {
@@ -20,10 +21,10 @@ export const BlogListView = () => {
                                 <div className="blogs-container">
                                     {
                                         BLOG_DATA.map(
-                                            (blog) => (
+                                            (blog: BlogData) => (
                                                 <BlogView
-                                                    key={blog.blogTitle}
-                                                    {...blog}
+                                                    key={blog.getAllData().blogTitle}
+                                                    blog={blog}
                                                 />
                                             )
                                         )

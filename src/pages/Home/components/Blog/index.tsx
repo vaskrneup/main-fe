@@ -22,8 +22,8 @@ export const Blog = () => {
                                         BLOG_DATA.map(
                                             (blog) => (
                                                 <BlogView
-                                                    key={blog.blogTitle}
-                                                    {...blog}
+                                                    key={blog.getAllData().blogTitle}
+                                                    blog={blog}
                                                 />
                                             )
                                         )

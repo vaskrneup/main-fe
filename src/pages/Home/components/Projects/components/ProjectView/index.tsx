@@ -1,12 +1,12 @@
 import { Chip } from "../../../../../../components/Chip"
 import "./project_view.css"
-import { projectViewPropsDatatype } from "./datatypes";
+import { ProjectData } from "./datatypes";
 import { HR } from "../../../../../../components/HR";
 import { changeActivePageWrapper } from "../../../../../../components/PageManager/utils";
 import { Link } from "react-router-dom";
 
 
-export const ProjectView = (props: projectViewPropsDatatype) => {
+export const ProjectView = ({ project }: { project: ProjectData }) => {
     let linkExtras: {
         to?: string,
         onClick: any,
@@ -15,18 +15,18 @@ export const ProjectView = (props: projectViewPropsDatatype) => {
         target?: string
     } = {
         className: "project-name",
-        onClick: window.location.pathname === "/" ? changeActivePageWrapper(`project-mainlink-${props.projectName}?redirect="${props.mainLink}"`) : undefined
+        onClick: window.location.pathname === "/" ? changeActivePageWrapper(`project-mainlink-${project.getAllData().projectName}?redirect="${project.getAllData().mainLink}"`) : undefined
     };
 
-    if (props.projectDetailsMarkdownLink) {
+    if (project.getAllData().projectDetailsMarkdownLink) {
         linkExtras = {
             ...linkExtras,
-            to: `/project/${props.id}`,
+            to: `/project/${project.getAllData().id}`,
         };
     } else {
         linkExtras = {
             ...linkExtras,
-            href: props.mainLink,
+            href: project.getAllData().mainLink,
             target: "_blank",
         };
     }
@@ -39,7 +39,7 @@ export const ProjectView = (props: projectViewPropsDatatype) => {
                     rgba(26, 55, 77, 0.75),
                     rgba(26, 55, 77, 0.95)
                 ),
-                url(${props.projectImage})`
+                url(${project.getAllData().projectImage})`
             }}
         >
             <div className="top-container">
@@ -49,20 +49,20 @@ export const ProjectView = (props: projectViewPropsDatatype) => {
                             to={linkExtras.to}
                             {...linkExtras}
                         >
-                            {props.projectName}
+                            {project.getAllData().projectName}
                         </Link> :
-                            <a {...linkExtras}>{props.projectName}</a>
+                            <a {...linkExtras}>{project.getAllData().projectName}</a>
                         }
                     </h2>
-                    <h4 className="project-for">{props.projectFor}</h4>
+                    <h4 className="project-for">{project.getAllData().projectFor}</h4>
                 </div>
                 <div className="project-external-link-container">
                     {
-                        props.githubLink ?
+                        project.getAllData().githubLink ?
                             <a
-                                href={props.githubLink}
+                                href={project.getAllData().githubLink}
                                 target={"_blank"}
-                                onClick={changeActivePageWrapper(`project-github-link-${props.projectName}?redirect="${props.githubLink}"`)}
+                                onClick={changeActivePageWrapper(`project-github-link-${project.getAllData().projectName}?redirect="${project.getAllData().githubLink}"`)}
                             >
                                 <i className="fab fa-github link-btn"></i>
                             </a>
@@ -71,11 +71,11 @@ export const ProjectView = (props: projectViewPropsDatatype) => {
                     }
                     &nbsp;&nbsp;&nbsp;
                     {
-                        props.demoLink ?
+                        project.getAllData().demoLink ?
                             <a
-                                href={props.demoLink}
+                                href={project.getAllData().demoLink}
                                 target={"_blank"}
-                                onClick={changeActivePageWrapper(`project-demo-link-${props.projectName}?redirect="${props.demoLink}"`)}
+                                onClick={changeActivePageWrapper(`project-demo-link-${project.getAllData().projectName}?redirect="${project.getAllData().demoLink}"`)}
                             >
                                 <i className="fas fa-external-link-alt link-btn"></i>
                             </a>
@@ -86,13 +86,13 @@ export const ProjectView = (props: projectViewPropsDatatype) => {
             </div>
             <div className="bottom-contanier">
                 <p className="project-description">
-                    {props.projectDescription}
+                    {project.getAllData().projectDescription}
                 </p>
                 <HR />
                 <div className="category-chip-container">
                     {
-                        props.projectTags.map(
-                            (tag) => (
+                        project.getAllData().projectTags.map(
+                            (tag: string) => (
                                 <Chip
                                     key={tag}
                                 >

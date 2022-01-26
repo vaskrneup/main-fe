@@ -1,7 +1,7 @@
 import { Section } from "../Section";
 import { ProjectView } from "./components/ProjectView"
 import "./projects.css";
-import { projectViewPropsDatatype } from "./components/ProjectView/datatypes";
+import { ProjectData, projectViewPropsDatatype } from "./components/ProjectView/datatypes";
 import { PROJECT_DATA } from "../../../../data/projectData";
 import { PageManager } from "../../../../components/PageManager";
 import { Link } from "react-router-dom";
@@ -19,11 +19,11 @@ export const Projects = () => {
                         <div className="section-body">
                             <div className="projects-container">
                                 {PROJECT_DATA.map(
-                                    (project: projectViewPropsDatatype) => {
+                                    (project: ProjectData) => {
                                         return (
                                             <ProjectView
-                                                key={project.projectName}
-                                                {...project}
+                                                key={project.getAllData().projectName}
+                                                project={project}
                                             />
                                         )
                                     }

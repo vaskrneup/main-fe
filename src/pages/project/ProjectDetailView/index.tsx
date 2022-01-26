@@ -3,7 +3,7 @@ import { PageManager } from "../../../components/PageManager";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown"
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getProjectDataFromIdentifier, optionalProjectViewPropsDatatype, projectViewPropsDatatype } from "../../Home/components/Projects/components/ProjectView/datatypes";
+import { getProjectDataFromIdentifier, ProjectData } from "../../Home/components/Projects/components/ProjectView/datatypes";
 import axios from "axios";
 import remarkGfm from 'remark-gfm'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
@@ -11,17 +11,17 @@ import { vscDarkPlus as codeBlockTheme } from 'react-syntax-highlighter/dist/esm
 import "./project-detail-view.css"
 
 
-export const ProjectDetailView = (props?: optionalProjectViewPropsDatatype | projectViewPropsDatatype) => {
+export const ProjectDetailView = ({ project }: { project?: ProjectData }) => {
     const [blogMarkdown, setBlogMarkdown] = useState("");
     const params = useParams<{ projectId: string }>();
 
-    useEffect(() => {
-        if (params !== undefined) {
-            props = getProjectDataFromIdentifier({ value: params.projectId })
-        }
+    if (params !== undefined) {
+        project = getProjectDataFromIdentifier({ value: params.projectId })
+    }
 
-        if (props?.projectDetailsMarkdownLink) {
-            axios.get(props.projectDetailsMarkdownLink)
+    useEffect(() => {
+        if (project?.getAllData().projectDetailsMarkdownLink) {
+            axios.get(project.getAllData().projectDetailsMarkdownLink || "")
                 .then(resp => {
                     setBlogMarkdown(resp.data);
                 })
