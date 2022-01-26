@@ -2,7 +2,6 @@ import packageJsonData from "../../../package.json"
 import { CREATE_SITEMAP_FROM } from "../../data/config"
 import { BlogData } from "../../pages/Home/components/Blog/components/BlogView/datatypes"
 import { ProjectData } from "../../pages/Home/components/Projects/components/ProjectView/datatypes"
-import fs from "fs"
 
 
 export const getFullURLPath = (path: string): string => {
@@ -13,6 +12,7 @@ export const getFullURLPath = (path: string): string => {
 export const STATIC_ROUTES: string[] = [
     getFullURLPath("/blog"),
     getFullURLPath("/project"),
+    packageJsonData.homepage,
 ]
 
 export const sitemapGenerator = (data: (BlogData | ProjectData)[]): string[] => {
