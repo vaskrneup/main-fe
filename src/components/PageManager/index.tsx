@@ -11,7 +11,6 @@ export const PageManager = (props: pageManagerPropsDatatype) => {
 
     return (
         <div
-            className="apple"
             onMouseEnter={(e) => {
                 changeActivePageWrapper(props.page || "/")(e);
             }}

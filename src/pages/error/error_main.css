@@ -1,0 +1,42 @@
+.error-container {
+	padding: 10vh 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	text-align: center;
+}
+
+.error-title {
+	font-size: 18rem;
+	color: var(--lighter-text-color);
+}
+
+.error-subtitle {
+	font-size: 3rem;
+}
+
+.error-description {
+	font-size: 1rem;
+	padding: 1rem 0;
+}
+
+.error-action-btn {
+	all: unset;
+	width: fit-content;
+	background-color: var(--link-color);
+	font-size: 2rem;
+	padding: 1rem 2rem;
+	margin: 1rem 0;
+	border-radius: 0.5rem;
+	font-weight: bold;
+	border: 1px solid var(--link-hover-color);
+	transition: background-color 200ms, color 200ms;
+}
+
+.error-action-btn:hover {
+	background-color: transparent;
+	cursor: pointer;
+	color: var(--link-hover-color);
+}
