@@ -1,19 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.79f03377.css",
-    "main.js": "/static/js/main.ce0f22e5.js",
+    "main.css": "/static/css/main.39a6c762.css",
+    "main.js": "/static/js/main.b5353152.js",
     "static/js/787.ce0d555a.chunk.js": "/static/js/787.ce0d555a.chunk.js",
     "static/media/nepal_mountain.jpg": "/static/media/nepal_mountain.73fb19b10238659a90ee.jpg",
+    "static/media/js_bouncy_ball_image.png": "/static/media/js_bouncy_ball_image.1d35167033d1ebdd315c.png",
+    "static/media/NEPSE_analysis.jpg": "/static/media/NEPSE_analysis.a1fa53b4287aa8a4f159.jpg",
+    "static/media/phishing_site_destroyer.jpg": "/static/media/phishing_site_destroyer.2b13f6718b2b13b70abc.jpg",
+    "static/media/messenger_automation.jpg": "/static/media/messenger_automation.7fb2d94c5e626a2ec34a.jpg",
     "static/media/spreadsheet.png": "/static/media/spreadsheet.9b8d1a83ad2fc75bacae.png",
+    "static/media/bash_v4.png": "/static/media/bash_v4.521f2262e96566afac1f.png",
     "static/media/kpn_admin.png": "/static/media/kpn_admin.80e341fa61500a113a16.png",
+    "static/media/discord_bot.jpg": "/static/media/discord_bot.7611cf556a664de9c307.jpg",
     "static/media/flappy_bird.png": "/static/media/flappy_bird.f465a0e86d1086b5a565.png",
+    "static/media/twitter_scraping.jpg": "/static/media/twitter_scraping.1219d39388a0fc69e17b.jpg",
+    "static/media/ip_changer.jpg": "/static/media/ip_changer.3e87c1b58affbe7754ec.jpg",
     "index.html": "/index.html",
-    "main.79f03377.css.map": "/static/css/main.79f03377.css.map",
-    "main.ce0f22e5.js.map": "/static/js/main.ce0f22e5.js.map",
+    "main.39a6c762.css.map": "/static/css/main.39a6c762.css.map",
+    "main.b5353152.js.map": "/static/js/main.b5353152.js.map",
     "787.ce0d555a.chunk.js.map": "/static/js/787.ce0d555a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.79f03377.css",
-    "static/js/main.ce0f22e5.js"
+    "static/css/main.39a6c762.css",
+    "static/js/main.b5353152.js"
   ]
 }
