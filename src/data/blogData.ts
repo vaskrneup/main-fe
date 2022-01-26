@@ -1,4 +1,4 @@
-import { BlogData, blogViewPropsDatatype, blogViewPropsDatatypeKeys } from "../pages/Home/components/Blog/components/BlogView/datatypes"
+import { BlogData, blogViewPropsDatatypeKeys } from "../pages/Home/components/Blog/components/BlogView/datatypes";
 
 
 export const BLOG_DATA: BlogData[] = [
@@ -34,4 +34,8 @@ export const getBlogDataFromIdentifier = (
         }
     }
     return undefined
+}
+
+export const getBlogData = (numberOfBlogs: number): BlogData[] => {
+    return BLOG_DATA.slice(0, numberOfBlogs);
 }

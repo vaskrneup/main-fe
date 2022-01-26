@@ -1,11 +1,11 @@
-import { BLOG_DATA } from "../../../data/blogData"
-import { BlogView } from "../../Home/components/Blog/components/BlogView"
 import { Layout } from "../../../components/Layout";
-
-import "../../Home/components/Blog/blog.css";
-import "./blog_list_view.css"
 import { PageManager } from "../../../components/PageManager";
+import { getBlogData } from "../../../data/blogData";
+import "../../Home/components/Blog/blog.css";
+import { BlogView } from "../../Home/components/Blog/components/BlogView";
 import { BlogData } from "../../Home/components/Blog/components/BlogView/datatypes";
+import "./blog_list_view.css";
+
 
 
 export const BlogListView = () => {
@@ -20,7 +20,7 @@ export const BlogListView = () => {
                             <div className="blog">
                                 <div className="blogs-container">
                                     {
-                                        BLOG_DATA.map(
+                                        getBlogData(20).map(
                                             (blog: BlogData) => (
                                                 <BlogView
                                                     key={blog.getAllData().blogTitle}

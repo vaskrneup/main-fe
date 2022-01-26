@@ -1,9 +1,9 @@
-import { Chip } from "../../../../../../components/Chip"
-import "./project_view.css"
-import { ProjectData } from "./datatypes";
+import { Link } from "react-router-dom";
+import { Chip } from "../../../../../../components/Chip";
 import { HR } from "../../../../../../components/HR";
 import { changeActivePageWrapper } from "../../../../../../components/PageManager/utils";
-import { Link } from "react-router-dom";
+import { ProjectData } from "./datatypes";
+import "./project_view.css";
 
 
 export const ProjectView = ({ project }: { project: ProjectData }) => {
@@ -45,13 +45,19 @@ export const ProjectView = ({ project }: { project: ProjectData }) => {
             <div className="top-container">
                 <div className="project-title-container">
                     <h2>
-                        {linkExtras.to ? <Link
-                            to={linkExtras.to}
-                            {...linkExtras}
-                        >
-                            {project.getAllData().projectName}
-                        </Link> :
-                            <a {...linkExtras}>{project.getAllData().projectName}</a>
+                        {
+                            linkExtras.to ? (
+                                <Link
+                                    to={linkExtras.to}
+                                    {...linkExtras}
+                                >
+                                    {project.getAllData().projectName}
+                                </Link>
+                            ) : (
+                                <a {...linkExtras}>
+                                    {project.getAllData().projectName}
+                                </a>
+                            )
                         }
                     </h2>
                     <h4 className="project-for">{project.getAllData().projectFor}</h4>
@@ -62,6 +68,7 @@ export const ProjectView = ({ project }: { project: ProjectData }) => {
                             <a
                                 href={project.getAllData().githubLink}
                                 target={"_blank"}
+                                rel="noreferrer"
                                 onClick={changeActivePageWrapper(`project-github-link-${project.getAllData().projectName}?redirect="${project.getAllData().githubLink}"`)}
                             >
                                 <i className="fab fa-github link-btn"></i>
@@ -75,6 +82,7 @@ export const ProjectView = ({ project }: { project: ProjectData }) => {
                             <a
                                 href={project.getAllData().demoLink}
                                 target={"_blank"}
+                                rel="noreferrer"
                                 onClick={changeActivePageWrapper(`project-demo-link-${project.getAllData().projectName}?redirect="${project.getAllData().demoLink}"`)}
                             >
                                 <i className="fas fa-external-link-alt link-btn"></i>

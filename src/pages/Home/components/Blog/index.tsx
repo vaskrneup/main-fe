@@ -1,9 +1,9 @@
+import { Link } from "react-router-dom";
+import { PageManager } from "../../../../components/PageManager";
+import { getBlogData } from "../../../../data/blogData";
 import { Section } from "../Section";
 import "./blog.css";
 import { BlogView } from "./components/BlogView";
-import { BLOG_DATA } from "../../../../data/blogData";
-import { PageManager } from "../../../../components/PageManager";
-import { Link } from "react-router-dom";
 
 
 export const Blog = () => {
@@ -19,7 +19,7 @@ export const Blog = () => {
                             <div className="blog">
                                 <div className="blogs-container">
                                     {
-                                        BLOG_DATA.map(
+                                        getBlogData(4).map(
                                             (blog) => (
                                                 <BlogView
                                                     key={blog.getAllData().blogTitle}

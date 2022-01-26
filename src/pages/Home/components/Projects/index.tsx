@@ -1,10 +1,10 @@
-import { Section } from "../Section";
-import { ProjectView } from "./components/ProjectView"
-import "./projects.css";
-import { ProjectData, projectViewPropsDatatype } from "./components/ProjectView/datatypes";
-import { PROJECT_DATA } from "../../../../data/projectData";
-import { PageManager } from "../../../../components/PageManager";
 import { Link } from "react-router-dom";
+import { PageManager } from "../../../../components/PageManager";
+import { getProjectData } from "../../../../data/projectData";
+import { Section } from "../Section";
+import { ProjectView } from "./components/ProjectView";
+import { ProjectData } from "./components/ProjectView/datatypes";
+import "./projects.css";
 
 
 export const Projects = () => {
@@ -18,7 +18,7 @@ export const Projects = () => {
                         </h3>
                         <div className="section-body">
                             <div className="projects-container">
-                                {PROJECT_DATA.map(
+                                {getProjectData(4).map(
                                     (project: ProjectData) => {
                                         return (
                                             <ProjectView
