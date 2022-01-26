@@ -61,7 +61,7 @@ export const saveSiteMap = () => {
     sitemapGenerator(CREATE_SITEMAP_FROM).forEach(url => {
         sitemap += getSitemapUrl({
             loc: url,
-            lastmod: `${date.getFullYear()}-${date.getMonth()}-${date.getDay()}`
+            lastmod: `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDay()}`
         })
     })
 

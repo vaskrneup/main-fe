@@ -9,7 +9,6 @@ import { BlogDetailView } from "./pages/blog/BlogDetailView";
 import { ProjectListView } from "./pages/project/ProjectListView";
 import { ProjectDetailView } from "./pages/project/ProjectDetailView";
 import { PageNotFound404 } from "./pages/error/PageNotFound404";
-import { saveSiteMap } from "./bin/sitemap/sitemapGenerator";
 
 ReactGa.initialize('UA-216138233-1')
 
