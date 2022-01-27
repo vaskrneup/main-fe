@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.39a6c762.css",
-    "main.js": "/static/js/main.b5353152.js",
+    "main.js": "/static/js/main.5ad155bb.js",
     "static/js/787.ce0d555a.chunk.js": "/static/js/787.ce0d555a.chunk.js",
     "static/media/nepal_mountain.jpg": "/static/media/nepal_mountain.73fb19b10238659a90ee.jpg",
     "static/media/js_bouncy_ball_image.png": "/static/media/js_bouncy_ball_image.1d35167033d1ebdd315c.png",
@@ -17,11 +17,11 @@
     "static/media/ip_changer.jpg": "/static/media/ip_changer.3e87c1b58affbe7754ec.jpg",
     "index.html": "/index.html",
     "main.39a6c762.css.map": "/static/css/main.39a6c762.css.map",
-    "main.b5353152.js.map": "/static/js/main.b5353152.js.map",
+    "main.5ad155bb.js.map": "/static/js/main.5ad155bb.js.map",
     "787.ce0d555a.chunk.js.map": "/static/js/787.ce0d555a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.39a6c762.css",
-    "static/js/main.b5353152.js"
+    "static/js/main.5ad155bb.js"
   ]
 }
