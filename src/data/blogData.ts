@@ -10,7 +10,7 @@ export const BLOG_DATA: BlogData[] = [
             blogTags: ["blog", "test"],
             creationDate: "Jan 17, 2022",
             readTime: "3 Min",
-            blogMarkdownLink: "https://raw.githubusercontent.com/vaskrneup/IpChanger/main/README.md"
+            blogMarkdownLink: "https://raw.githubusercontent.com/vaskrneup/main-fe/main/src/blog_data/testBlog.md"
         }
     ),
 ]
