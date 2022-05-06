@@ -12,7 +12,7 @@ import { PageNotFound404 } from "./pages/error/PageNotFound404";
 import { DOWNLOAD_SITEMAP } from "./data/config";
 import { saveSiteMap } from "./bin/sitemap/sitemapGenerator";
 
-ReactGa.initialize('UA-216138233-1')
+ReactGa.initialize('G-LRL12W2DCJ')
 
 function App() {
   if (DOWNLOAD_SITEMAP) {
